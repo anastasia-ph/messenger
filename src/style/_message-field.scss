@@ -1,0 +1,29 @@
+.message-field__container{
+    width: 90%;
+    height:40px;
+
+
+
+}
+.message-field__message_bar{
+
+    width:100%;
+    height:40px;
+    border: 1px $mediumgrey solid;
+    text-indent: 20px;
+    border-radius: 20px;
+    &:focus{
+        outline: none;
+    }
+}
+.message-field__icon-container{
+    width:20px;
+    height: 20px;
+    position:relative;
+float: right;
+bottom: 32px;
+right:22px;
+}
+.message-field__icon{
+    width:100%;
+}

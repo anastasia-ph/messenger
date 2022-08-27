@@ -1,0 +1,42 @@
+@import "./colors";
+.chat-header{
+    margin:2em 0 2em 0.2em;
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $blue
+}
+// .search-field{
+//     font-size: 10px;
+//     font-family: Verdana, Geneva, Tahoma, sans-serif;
+//     color:$lightgrey
+// }
+// .message-field{
+//     font-size: 12px;
+//     font-family: Verdana, Geneva, Tahoma, sans-serif;
+//     color:$lightgrey
+// }
+.response-message{
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:$white
+}
+.user-message{
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:$darkgrey
+}
+.data-text{
+    font-size: 11px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:$darkgrey
+}
+.dialogs-messages{
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:$darkgrey
+}
+.user-names{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:$darkgrey
+}
