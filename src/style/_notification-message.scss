@@ -2,7 +2,7 @@
     @media (max-width:720px) {
         top:0;
         width:100%;
-        height: 100px;
+        height: 200px;
         border-top-left-radius: 0;
     border-top-right-radius: 0;
     
@@ -34,6 +34,11 @@
     flex-direction: column;
 }
 .notification__close-icon-container{
+    @media (max-width:720px){
+        margin: 10px 15px 0 0;
+        width:30px;
+        height: 30px;
+    }
     width: 15px;
     height: 15px;
 }

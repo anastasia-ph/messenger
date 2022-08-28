@@ -8,7 +8,7 @@ const NotificationMessage = (props) => {
 
             <div className="notification-body__container">
                 <div className="user-names">{props.text}</div>
-                <div className="dialogs-messages">{props.message}</div>
+                <div className="dialogs-messages" >{props.message}</div>
             </div>
             <div className="notification__close-icon-container" onClick={props.onClick}>
                 <img className="notification__close-icon" src="../assets/close.png" alt="close"></img>

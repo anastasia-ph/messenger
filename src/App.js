@@ -212,7 +212,7 @@ const dateWithFullMonthName = []
          </ChatBlock>):(<DialogsBlock>
          <DialogsHeader props={userdata[0]} prop={filterUsers} />
            <div className="chat-header">Chats</div>
-           {usersFiltered.map((e, i)=><DialogItem  props={e} text={trimText(lastMessages[e.key][0]) } date={lastMessages[e.key][1]} onClick={selectChatWindow}/>)}
+           {usersFiltered.map((e, i)=><DialogItem  props={e} text={trimText(lastMessages[e.key][0]) } date={dateWithFullMonthName[e.key]} onClick={selectChatWindow}/>)}
            </DialogsBlock>)}
      
          

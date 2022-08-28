@@ -34,6 +34,11 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:$darkgrey
 }
+.dialogs-messages__sm{
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:$darkgrey
+}
 .dialogs-messages{
     @media (max-width:720px){
         font-size: 18px;
@@ -43,6 +48,9 @@
     color:$darkgrey
 }
 .dialogs-messages__placeholder{
+    @media (max-width:720px){
+        font-size: 18px;
+    }
     font-size: 13px;
     font-style:italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
