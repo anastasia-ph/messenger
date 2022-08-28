@@ -1,18 +1,17 @@
 .message-income__container{
-    @media (max-width:720px){
-        margin-left: 0.3em;
-    }
     width:100%;
     height: max-content;
-    margin-left:1em;
-    padding: 1em 0 1em 0;
+    padding: 1em 0 1em 1em;
     display: flex;
+    box-sizing: border-box;
+
     flex-direction: row;
 }
 .message-income__text-container{
     margin-left:1em;
     width: 60%;
     height: max-content;
+    box-sizing: border-box;
 }
 .message-income__message-text{
     padding: 0.5em 1em 0.5em 1em;
@@ -26,8 +25,12 @@
     overflow-wrap: break-word;
     display: flex;
     align-items: center;
+    box-sizing: border-box;
+
 }
 .message-income__data{
     width:fit-content;
     margin: 0.5em  0 0 1.2em;
+    box-sizing: border-box;
+
 }

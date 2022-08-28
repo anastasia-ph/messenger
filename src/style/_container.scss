@@ -3,6 +3,8 @@
     height:100vh;
     display: flex;
     flex-direction: row;
+      touch-action: pan-x pan-y;
+    
 }
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */

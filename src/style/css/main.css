@@ -78,6 +78,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-touch-action: pan-x pan-y;
+      touch-action: pan-x pan-y;
 }
 
 .noselect {
@@ -316,8 +318,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -392,21 +394,16 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  margin-left: 1em;
-  padding: 1em 0 1em 0;
+  padding: 1em 0 1em 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-@media (max-width: 720px) {
-  .message-income__container {
-    margin-left: 0.3em;
-  }
 }
 
 .message-income__text-container {
@@ -415,6 +412,8 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .message-income__message-text {
@@ -441,6 +440,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .message-income__data {
@@ -448,6 +449,8 @@
   width: -moz-fit-content;
   width: fit-content;
   margin: 0.5em  0 0 1.2em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .message-outcome__container {
@@ -456,8 +459,7 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  margin-right: 1em;
-  padding: 1em 0 1em 0;
+  padding: 1em 1em  1em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -468,6 +470,8 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .message-outcome__message-text {
@@ -494,10 +498,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .message-outcome__data {
   margin: 0.5em 1.2em 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .notification__container {

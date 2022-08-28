@@ -2,11 +2,12 @@
     float: right;
     width:60%;
     height: max-content;
-    margin-right:1em;
-    padding: 1em 0 1em 0;
+    padding: 1em 1em  1em 0;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    box-sizing: border-box;
+
 
 }
 
@@ -22,7 +23,11 @@
     overflow-wrap: break-word;
     display: flex;
     align-items: center;
+    box-sizing: border-box;
+
 }
 .message-outcome__data{
    margin: 0.5em 1.2em 0 0;
+   box-sizing: border-box;
+
 }
