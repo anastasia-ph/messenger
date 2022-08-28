@@ -1,6 +1,7 @@
 @import "./colors";
 .chat-header{
     @media (max-width:720px) {
+        font-size: 30px;
         margin:2em 0 1em 0.2em;
     }
     margin:2em 0 2em 0.2em;
@@ -10,21 +11,33 @@
 }
 
 .response-message{
+    @media (max-width:720px){
+        font-size: 20px;
+    }
     font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:$white
 }
 .user-message{
+    @media (max-width:720px){
+        font-size: 20px;
+    }
     font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:$darkgrey
 }
 .data-text{
+    @media (max-width:720px){
+        font-size: 15px;
+    }
     font-size: 11px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:$darkgrey
 }
 .dialogs-messages{
+    @media (max-width:720px){
+        font-size: 18px;
+    }
     font-size: 13px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:$darkgrey
@@ -36,6 +49,9 @@
     color:$darkgrey
 }
 .user-names{
+    @media (max-width:720px){
+        font-size: 23px;
+    }
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:$darkgrey
