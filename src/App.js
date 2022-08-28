@@ -16,6 +16,7 @@ import MessageField from "./components/messageField";
 import MessageIncome from "./components/messageIncome";
 import MessageOutcome from "./components/messageOutcome";
 import NotificationMessage from "./components/notificationMessage";
+import { Helmet } from "react-helmet";
 
 
 function App() {
@@ -35,7 +36,7 @@ const dateWithFullMonthName = []
   const findLastMessages = () =>{
     const months = ['Jan', 'Feb', "Mar", "Apr", 'May', "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     for(let i=0; i<numberOfChats.length; i++){
-      if(JSON.parse(localStorage.getItem(i)).length!=0){
+      if(JSON.parse(localStorage.getItem(i)).length!==0){
       let ind = JSON.parse(localStorage.getItem(i)).length-1;
       let parsed = JSON.parse(localStorage.getItem(i));
       let text = Object.values(parsed[ind])[0][0];
@@ -78,11 +79,11 @@ const dateWithFullMonthName = []
 
     let key = ' '
     for(let i=0; i<receivedData.length; i++){
-      if(receivedData[i]["key"]==newFirst["key"]){
+      if(receivedData[i]["key"]===newFirst["key"]){
         key = i
       }
     }
-    if (receivedData[0]["key"] != newFirst["key"]){
+    if (receivedData[0]["key"] !== newFirst["key"]){
       receivedData.splice(key,1)
     receivedData.unshift(newFirst)
 
@@ -106,7 +107,7 @@ const dateWithFullMonthName = []
   const filterUsers = (e)=>{
     let input = e.target.value;
     let receivedDataFiltered = receivedData
-    if (input==' '){
+    if (input===' '){
       setUsersFiltered(receivedDataFiltered)
     }
     else{
@@ -145,7 +146,7 @@ const dateWithFullMonthName = []
     localStorage.setItem(currentChat, JSON.stringify(dialog));
     
     setCurrentMessages(JSON.parse(localStorage.getItem(currentChat)));
-    setTimeout(()=>(scrollChat(), 1));
+    setTimeout(()=>scrollChat(), 1);
     setTimeout(()=>setNotification(true), 1);
     
     setTimeout(()=>setNotification(false), 15000)
@@ -172,16 +173,17 @@ const dateWithFullMonthName = []
 
 
   let desktopComponent = (<DesktopComponent>
+
     <DialogsBlock>
     <DialogsHeader props={userdata[0]} prop={filterUsers} />
      <div className="chat-header">Chats</div>
-     {usersFiltered.map((e, i)=><DialogItem  props={e} text={trimText(lastMessages[e.key][0]) } date={dateWithFullMonthName[e.key]} onClick={selectChatWindow}/>)}
+     {usersFiltered.map((e, i)=><DialogItem  key = {i} props={e} text={trimText(lastMessages[e.key][0]) } date={dateWithFullMonthName[e.key]} onClick={selectChatWindow}/>)}
      </DialogsBlock>
    <ChatBlock>
      <ChatHeader props={data[localStorage.getItem("currentChat")]}></ChatHeader>
   <ChatBody>
    
-  {Object.keys(currentMessages).map((key, i)=>Object.keys(currentMessages[key])[0].includes("them") ? <MessageIncome props={data[localStorage.getItem("currentChat")]} message={Object.values(currentMessages[key])[0][0]} date={new Date(Object.values(currentMessages[key])[0][1]).toLocaleTimeString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'}).replaceAll(".","/")}></MessageIncome>: <MessageOutcome message={Object.values(currentMessages[key])[0][0]} date={new Date(Object.values(currentMessages[key])[0][1]).toLocaleTimeString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'}).replaceAll(".","/")}></MessageOutcome>)}
+  {Object.keys(currentMessages).map((key, i)=>Object.keys(currentMessages[key])[0].includes("them") ? <MessageIncome key={i} props={data[localStorage.getItem("currentChat")]} message={Object.values(currentMessages[key])[0][0]} date={new Date(Object.values(currentMessages[key])[0][1]).toLocaleTimeString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'}).replaceAll(".","/")}></MessageIncome>: <MessageOutcome key={i} message={Object.values(currentMessages[key])[0][0]} date={new Date(Object.values(currentMessages[key])[0][1]).toLocaleTimeString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'}).replaceAll(".","/")}></MessageOutcome>)}
     </ChatBody>
    <ChatFooter >
     <MessageField onClick={sendMessage}>
@@ -192,11 +194,13 @@ const dateWithFullMonthName = []
      </ChatBlock>
    </DesktopComponent>)
    let mobileComponent = (<MobileComponent>
+       <Helmet><meta name="viewport" content="initial-scale=0.66, user-scalable=no"></meta></Helmet>
+
      {isChat? (<ChatBlock>
            <ChatHeader props={data[localStorage.getItem("currentChat")]} onClick={() =>(setIsChat(false), localStorage.setItem("isChat",false))}></ChatHeader>
            <ChatBody onLoad={scrollChat}>
  
-    {Object.keys(currentMessages).map((key)=>Object.keys(currentMessages[key])[0].includes("them") ? <MessageIncome props={data[localStorage.getItem("currentChat")]}  message={Object.values(currentMessages[key])[0][0]} date={new Date(Object.values(currentMessages[key])[0][1]).toLocaleTimeString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'}).replaceAll(".","/")}></MessageIncome>: <MessageOutcome message={Object.values(currentMessages[key])[0][0]} date={new Date(Object.values(currentMessages[key])[0][1]).toLocaleTimeString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'}).replaceAll(".","/")}></MessageOutcome>)}
+    {Object.keys(currentMessages).map((key, i)=>Object.keys(currentMessages[key])[0].includes("them") ? <MessageIncome  key={i} props={data[localStorage.getItem("currentChat")]}  message={Object.values(currentMessages[key])[0][0]} date={new Date(Object.values(currentMessages[key])[0][1]).toLocaleTimeString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'}).replaceAll(".","/")}></MessageIncome>: <MessageOutcome key={i} message={Object.values(currentMessages[key])[0][0]} date={new Date(Object.values(currentMessages[key])[0][1]).toLocaleTimeString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'}).replaceAll(".","/")}></MessageOutcome>)}
            </ChatBody>
            <ChatFooter >
              <MessageField onClick={sendMessage}>
@@ -222,8 +226,13 @@ window.addEventListener("resize", function(){
   scrollChat()
 })
   return (
+   <div className="App">
+           <Helmet><meta name="viewport" content="initial-scale=0.66, user-scalable=no"/>
+           <title>Messenger</title></Helmet>
+           {isDesktop ? desktopComponent : mobileComponent}
 
- isDesktop? desktopComponent : mobileComponent
+   </div>
+
   
 
   

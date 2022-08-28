@@ -14,7 +14,7 @@ const DialogItem = (props) => {
             <div className="dialogItem__userInfo-container">
                 <UserName {...props}> </UserName>
                 <div className="dialogs-messages">
-                    <div className={props.text == undefined ? "dialogs-messages__placeholder" : "dialogs-messages"} > {props.text == undefined ? "No messages yet.." : props.text}</div>
+                    <div className={props.text === undefined ? "dialogs-messages__placeholder" : "dialogs-messages"} > {props.text === undefined ? "No messages yet.." : props.text}</div>
                     <div className="data-text">{props.date}</div>
                 </div>
             </div>

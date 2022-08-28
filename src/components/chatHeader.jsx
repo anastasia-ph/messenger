@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import UserPictureBlock from "./userPictureBlock";
 import UserName from "./userName";
 import './../style/css/main.css'
