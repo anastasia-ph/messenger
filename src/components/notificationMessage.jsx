@@ -3,7 +3,7 @@ import UserPicture from "./userPicture";
 
 const NotificationMessage = (props) => {
     return (
-        <div className="notification__container">
+        <div className={`notification__container`}>
             <div className="notification-picture__container"><UserPicture {...props}></UserPicture></div>
 
             <div className="notification-body__container">

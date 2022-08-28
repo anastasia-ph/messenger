@@ -1,31 +1,32 @@
-[{
+[
+    {
+        "username":"Takahiro Moriuchi ",
+        "photo":"../assets/person6.jpg",
+        "key":0
+    },
+    {
     "username":"Charlie Moss",
     "photo":"../assets/person1.jpg",
-    "key":0
+    "key":1
 },
 {
     "username":"Mint Yung",
     "photo":"../assets/person2.jpg",
-    "key":1
+    "key":2
 },
 {
     "username":"Joel Hope",
     "photo":"../assets/person3.jpeg"
     ,
-    "key":2
+    "key":3
 },
 {
     "username":"Sam Collins",
     "photo":"../assets/person4.jpg",
-    "key":3
+    "key":4
 },
 {
     "username":"Mags Star",
     "photo":"../assets/person5.jpg",
-    "key":4
-},
-{
-    "username":"Oliver Sykes",
-    "photo":"../assets/person6.jpg",
     "key":5
 }]

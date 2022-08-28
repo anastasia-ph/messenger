@@ -1,7 +1,12 @@
 .chat-block{
+    @media (max-width:790px) {
+        width: 100%;
+    }
+    @media (min-width:721px) and(max-width:1024px) {
+        width:60%;
+      }
     width:70vw;
     height:100vh;
-    background-color: green;
     overflow: hidden;
     box-sizing: border-box;
       

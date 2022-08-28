@@ -1,4 +1,12 @@
 .chatwindow-header{
+    @media (max-width:720px) {
+        height: 11%;
+        width: 100vw;
+    }
+    @media (min-width:721px) and (max-width:1024px) {
+        height: 10%;
+        width: 100vw;
+    }
     height: 10%;
     width: 100%;
     background-color: $lightgrey;
@@ -6,4 +14,15 @@ box-sizing: border-box;
 display: flex;
 flex-direction: row;
 align-items: center;
+}
+.back-icon__container{
+    display: none;
+    @media (max-width:720px){
+        display: flex;
+        width: 20px;
+        height: 20px;
+    }
+    .back-icon__icon{
+        width:100%
+    }
 }

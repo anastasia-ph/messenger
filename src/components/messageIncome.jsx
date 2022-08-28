@@ -6,9 +6,9 @@ const MessageIncome = (props) => {
 
     return (
         <div className='message-income__container'>
-            <UserPicture {...props}></UserPicture>
+            <UserPicture {...props} ></UserPicture>
             <div className='message-income__text-container'>
-                <div className='message-income__message-text response-message' >{props.message}
+                <div className='message-income__message-text response-message select' >{props.message}
                 </div>
                 <div className='message-income__data data-text'>{props.date}</div>
             </div>

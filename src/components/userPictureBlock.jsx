@@ -4,7 +4,7 @@ import UserPicture from './userPicture'
 import UserOnlineIcon from './userOnlineIcon'
 const UserPictureBlock = (props) => {
     return (
-        <div className='user-picture-block'>
+        <div className={`user-picture-block ${props.mobileClass}`}>
             <UserPicture  {...props}></UserPicture>
             <UserOnlineIcon></UserOnlineIcon>
         </div>

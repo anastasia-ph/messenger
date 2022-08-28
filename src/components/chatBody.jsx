@@ -1,10 +1,10 @@
 import React, { Children } from "react";
 import './../style/css/main.css'
 
-const ChatBody = ({ children }) => {
+const ChatBody = ({ children }, { onLoad }) => {
 
     return (
-        <div id="chat-body" className="chatwindow-body">{children}</div>
+        <div id="chat-body" onLoadStart={onLoad} className="chatwindow-body">{children}</div>
     )
 }
 
